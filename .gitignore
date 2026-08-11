@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+context/
+data/*
+figures/*
+models/*
+!models/1173808_Assignment1_final.joblib
+1173808_Assignment1_Report.md

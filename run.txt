@@ -1,0 +1,19 @@
+COMP662 Assignment 1 — Run Guide
+Student ID: 1173808
+
+Python 3.10+ is required.
+
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    python assignment1.py
+
+The training CSV is `data/train.csv`. The command creates figures, synthetic data,
+evaluation reports and `models/1173808_Assignment1_final.joblib`.
+
+For a new CSV with the same ten feature columns:
+
+    python predict.py data/new_beans.csv data/predictions.csv
+
+The output CSV contains one `Class` column. No separate preprocessing script is
+needed because the final random-forest model uses the saved feature order directly.
