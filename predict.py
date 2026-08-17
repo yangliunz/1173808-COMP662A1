@@ -1,4 +1,5 @@
 """Generate COMP662 class predictions from a saved model and a CSV file."""
+from pathlib import Path
 import sys
 import joblib
 import pandas as pd
@@ -6,7 +7,7 @@ import pandas as pd
 
 if len(sys.argv) != 3:
     raise SystemExit("Usage: python predict.py input.csv output.csv")
-bundle = joblib.load("models/1173808_Assignment1_final.joblib")
+bundle = joblib.load(Path(__file__).resolve().parent / "models" / "1173808_Assignment1_final.joblib")
 data = pd.read_csv(sys.argv[1])
 missing = set(bundle["features"]) - set(data.columns)
 if missing:

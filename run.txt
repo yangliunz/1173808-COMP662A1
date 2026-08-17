@@ -1,28 +1,22 @@
 COMP662 Assignment 1 — Run Guide
 Student ID: 1173808
 
-Python 3.10+ is required.
-
-Kaggle benchmark: upload this repository (or attach the bean-data dataset), enable
-the **T4 x2** accelerator, then run `assignment1.py` from `/kaggle/working`.
-The run prints the detected GPU configuration and writes `data/runtime_benchmark.txt`.
+Python 3.10+ is required. Install the exact package versions in `requirements.txt`.
 
     python -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
-    python assignment1.py
-
-To open the submitted analysis notebook after generating the artefacts:
-
     jupyter notebook notebooks/1173808_Assignment1.ipynb
 
-The training CSV is `data/train.csv` locally; on Kaggle the script discovers the attached
-`train.csv` under `/kaggle/input`. The command creates figures, synthetic data,
-evaluation reports and `models/1173808_Assignment1_final.joblib`.
+Run all notebook cells in order. Locally, place the released training CSV at
+`data/train.csv`; on Kaggle, attach the dataset and enable **T4 x2**. The notebook
+automatically locates Kaggle's `train.csv`, writes figures/data artefacts, and saves
+`models/1173808_Assignment1_final.joblib`.
 
 For a new CSV with the same ten feature columns:
 
     python predict.py data/new_beans.csv data/predictions.csv
 
-The output CSV contains one `Class` column. No separate preprocessing script is
-needed because the final random-forest model uses the saved feature order directly.
+The output CSV contains one `Class` column. `predict.py` locates the submitted model
+beside itself. No separate preprocessing script is needed because the final
+random-forest model uses the saved feature order.
