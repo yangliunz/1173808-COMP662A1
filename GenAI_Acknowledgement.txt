@@ -1,5 +1,1 @@
-Generative AI acknowledgement
-
-OpenAI Codex was used for brainstorming the conditional-VAE experiment structure,
-drafting code and documenting the workflow. The student is responsible for running,
-checking, interpreting and revising all submitted work.
+OpenAI Codex used for code drafting, documentation, and debugging. All analysis and interpretations reviewed by student.
