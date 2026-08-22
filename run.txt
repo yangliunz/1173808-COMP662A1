@@ -19,4 +19,5 @@ For a new CSV with the same ten feature columns:
 
 The output CSV contains one `Class` column. `predict.py` locates the submitted model
 beside itself. No separate preprocessing script is needed because the final
-random-forest model uses the saved feature order.
+model is saved as a self-contained scikit-learn Pipeline (StandardScaler +
+RandomForestClassifier) that automatically handles feature scaling and ordered feature mapping.

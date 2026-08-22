@@ -1,1 +1,5 @@
-OpenAI Codex used for code drafting, documentation, and debugging. All analysis and interpretations reviewed by student.
+GenAI acknowledgement
+
+Codex and OpenCode were used only for brainstorming, requirements interpretation, code review, and debugging.
+
+All model selection, metric interpretation, results, and submitted conclusions were reviewed and remain the student's responsibility. The student is responsible for the correctness and originality of this submission.
